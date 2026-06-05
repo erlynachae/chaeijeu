@@ -115,6 +115,40 @@
     gap: 28px;
   }
 
+  /* ── TOMBOL ADD PRODUCT ── */
+  .btn-enter-product {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background-color: var(--dark);
+    color: var(--cream);
+    font-family: 'Gaegu', cursive;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background 0.2s, transform 0.15s;
+    z-index: 10;
+  }
+  .btn-enter-product:hover {
+    background-color: var(--mid);
+    transform: scale(1.03);
+  }
+
+  /* Responsif: Jika dibuka di HP, tombol otomatis pindah ke tengah bawah tagline */
+  @media (max-width: 600px) {
+    .btn-enter-product {
+      position: relative;
+      top: unset;
+      right: unset;
+      display: inline-block;
+      margin-top: 16px;
+    }
+  }
+
   /* ── CARD ── */
   .card {
     background: #fff;
@@ -176,6 +210,7 @@
   .card-img-wrap img.loaded ~ .img-fallback { display: none; }
   .card-img-wrap img { position: relative; z-index: 1; }
 
+  
   /* ── CARD BODY ── */
   .card-body { padding: 18px 20px 20px; }
   .card-tag {
@@ -256,6 +291,7 @@
 <body>
 
 <header>
+  <a href="add-product-3.html" class="btn-enter-product">+ Enter Product</a>
   <div class="brand-badge">✦ life is better in pyjamas ✦</div>
   <h1 class="brand-title">
     chaeijeu
